@@ -1,0 +1,9 @@
+fff fff fff fff fff fff
+f77 ff7 7f7 7ff 77f f7f
+f00 ff0 0f0 0ff 00f f0f
+700 770 070 077 007 707
+000 000 000 000 000 000
+
+fff fff fff fff fff fff
+f00 ff0 0f0 0ff 00f f0f
+000 000 000 000 000 000
