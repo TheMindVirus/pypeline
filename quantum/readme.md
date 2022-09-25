@@ -3,7 +3,7 @@
 * Quantum = Groups [(read more)](/quantum/notes.md)
 * Neural = Links
 * Tensor = Transforms
-`<pending tensor logic graphs>`
 
+![screenshot](/quantum/difference.png)
 ![screenshot](/quantum/subplot.png)
 ![screenshot](/quantum/scope.png)
