@@ -6,4 +6,5 @@
 
 ![screenshot](/quantum/difference.png)
 ![screenshot](/quantum/subplot.png)
+![screenshot](/quantum/subplot2.png)
 ![screenshot](/quantum/scope.png)
