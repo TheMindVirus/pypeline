@@ -43,6 +43,9 @@
 # Eyesight
 ![eyesight](https://github.com/themindvirus/pypeline/blob/opticks/img/eyesight.png)
 
+# Isadora
+![isadora](https://github.com/themindvirus/pypeline/blob/opticks/img/isadora.png)
+
 # Unreal Engine
 ![unrealengine](https://github.com/themindvirus/pypeline/blob/opticks/img/unrealengine.png)
 
