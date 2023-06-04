@@ -4,6 +4,9 @@
 # DirectX1
 ![directx1](https://github.com/themindvirus/pypeline/blob/opticks/img/directx1.png)
 
+# BiRDF33D Matrix
+![3dmatrix](https://github.com/themindvirus/pypeline/blob/opticks/img/birdf33d.png)
+
 # Workbench
 ![workbench](https://github.com/themindvirus/pypeline/blob/opticks/img/workbench.png)
 
@@ -22,6 +25,12 @@
 # ProRender Uber
 ![prorender](https://github.com/themindvirus/pypeline/blob/opticks/img/prorender.png)
 
+# Source
+![source](https://github.com/themindvirus/pypeline/blob/opticks/img/source.png)
+
+# Torque
+![torque](https://github.com/themindvirus/pypeline/blob/opticks/img/torque.png)
+
 # Blockbench
 ![blockbench](https://github.com/themindvirus/pypeline/blob/opticks/img/blockbench.png)
 
@@ -30,6 +39,9 @@
 
 # Eyesight
 ![eyesight](https://github.com/themindvirus/pypeline/blob/opticks/img/eyesight.png)
+
+<!-- # Unreal Engine -->
+<!-- ![unrealengine](https://github.com/themindvirus/pypeline/blob/opticks/img/unrealengine.png) -->
 
 # Red Engine
 ![redengine](https://github.com/themindvirus/pypeline/blob/opticks/img/redengine.png)
