@@ -25,8 +25,8 @@
 # ProRender Uber
 ![prorender](https://github.com/themindvirus/pypeline/blob/opticks/img/prorender.png)
 
-# Source
-![source](https://github.com/themindvirus/pypeline/blob/opticks/img/source.png)
+# Source Hammer
+![sourcehammer](https://github.com/themindvirus/pypeline/blob/opticks/img/sourcehammer.png)
 
 # Torque
 ![torque](https://github.com/themindvirus/pypeline/blob/opticks/img/torque.png)
