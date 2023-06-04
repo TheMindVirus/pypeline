@@ -46,6 +46,9 @@
 # Isadora
 ![isadora](https://github.com/themindvirus/pypeline/blob/opticks/img/isadora.png)
 
+# VSXu
+![vsxu](https://github.com/themindvirus/pypeline/blob/opticks/img/vsxu.png)
+
 # Unreal Engine
 ![unrealengine](https://github.com/themindvirus/pypeline/blob/opticks/img/unrealengine.png)
 
