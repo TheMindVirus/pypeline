@@ -49,6 +49,9 @@
 # Red Engine
 ![redengine](https://github.com/themindvirus/pypeline/blob/opticks/img/redengine.png)
 
+# ZGameEditor
+![zgame](https://github.com/themindvirus/pypeline/blob/opticks/img/zgame.png)
+
 # PSP Lib Gu
 ![psplibgu](https://github.com/themindvirus/pypeline/blob/opticks/img/psplibgu.png)
 
