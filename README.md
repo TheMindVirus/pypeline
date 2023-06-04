@@ -7,16 +7,19 @@
 # Workbench
 ![workbench](https://github.com/themindvirus/pypeline/blob/opticks/img/workbench.png)
 
-# OptiX
+# OptiX Cycles
 ![optix](https://github.com/themindvirus/pypeline/blob/opticks/img/optix.png)
 
-# CUDA
+# CUDA Cycles
 ![cuda](https://github.com/themindvirus/pypeline/blob/opticks/img/cuda.png)
+
+# LuxRender
+![luxrender](https://github.com/themindvirus/pypeline/blob/opticks/img/luxrender.png)
 
 # EEVEE
 ![eevee](https://github.com/themindvirus/pypeline/blob/opticks/img/eevee.png)
 
-# ProRender
+# ProRender Uber
 ![prorender](https://github.com/themindvirus/pypeline/blob/opticks/img/prorender.png)
 
 # Blockbench
@@ -30,6 +33,9 @@
 
 # Red Engine
 ![redengine](https://github.com/themindvirus/pypeline/blob/opticks/img/redengine.png)
+
+# PSP Lib Gu
+![psplibgu](https://github.com/themindvirus/pypeline/blob/opticks/img/psplibgu.png)
 
 # PixelFire
 ![pixelfire](https://github.com/themindvirus/pypeline/blob/opticks/img/pixelfire.png)
