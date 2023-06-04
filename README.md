@@ -19,6 +19,9 @@
 # ProRender
 ![prorender](https://github.com/themindvirus/pypeline/blob/opticks/img/prorender.png)
 
+# Blockbench
+![blockbench](https://github.com/themindvirus/pypeline/blob/opticks/img/blockbench.png)
+
 # BrickLink
 ![bricklink](https://github.com/themindvirus/pypeline/blob/opticks/img/bricklink.png)
 
@@ -27,6 +30,9 @@
 
 # Red Engine
 ![redengine](https://github.com/themindvirus/pypeline/blob/opticks/img/redengine.png)
+
+# PixelFire
+![pixelfire](https://github.com/themindvirus/pypeline/blob/opticks/img/pixelfire.png)
 
 # Unity Bonfire
 ![unitybonfire](https://github.com/themindvirus/pypeline/blob/opticks/img/unity-bonfire.png)
