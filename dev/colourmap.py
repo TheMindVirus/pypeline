@@ -24,7 +24,8 @@ def main():
     #y_Red.method = [x, [1 if x < (1/6) else 1.0 - pow(6 * (x - (1/6)), p) if x < (2/6) else 0 if x < (3/6) else 0 if x < (4/6) else 1.0 - pow(6 * ((5/6) - x), p) if x < (5/6) else 1 for x in x]]
     #y_Red.method = [x, [1 if x < (1/6) else (math.cos(math.tau * (3 * (x + (1/6)))) + 1) / 2 if x < (2/6) else 0 if x < (4/6) else (math.cos(math.tau * (3 * (x - (1/6)))) + 1) / 2 if x < (5/6) else 1 for x in x]]
     #y_Red.method = [x, [1 if x < (1/6) else np.sqrt(pow((3 * (1.0 - x)), 2)) if x < (2/6) else 0 if x < (4/6) else (math.cos(math.tau * (3 * (x - (1/6)))) + 1) / 2 if x < (5/6) else 1 for x in x]]
-    y_Red.method = [x, [1 if x < (1/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * (x - (1/6)), p))) + 1) / 2 if x < (1.5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * ((2/6) - x), p)))) / 2 if x < (2/6) else 0 if x < (4/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * (x - (4/6)), p)))) / 2 if x < (4.5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * ((5/6) - x), p))) + 1) / 2 if x < (5/6) else 1 for x in x]]
+    #y_Red.method = [x, [1 if x < (1/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * (x - (1/6)), p))) + 1) / 2 if x < (1.5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * ((2/6) - x), p)))) / 2 if x < (2/6) else 0 if x < (4/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * (x - (4/6)), p)))) / 2 if x < (4.5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * ((5/6) - x), p))) + 1) / 2 if x < (5/6) else 1 for x in x]]
+    y_Red.method = [x, [1 if x < (1/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * (x - (1.5/6)), p))) + 1) / 2 if x < (1.5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * ((1.5/6) - x), p)))) / 2 if x < (2/6) else 0 if x < (4/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * (x - (4.5/6)), p)))) / 2 if x < (4.5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * ((4.5/6) - x), p))) + 1) / 2 if x < (5/6) else 1 for x in x]]
     #y_Red.colour = (1.0, 0.0, 0.0)
     y_Red.colour = (1.0, 0.0, 0.3)
     y.append(y_Red)
@@ -39,7 +40,8 @@ def main():
     #y_Green.method = [x, [1.0 - pow(3 * ((1/3) - x), p) if x < (1/3) else 1.0 - pow(3 * (x - (1/3)), p) if x < (2/3) else 0 for x in x]]
     #y_Green.method = [x, [1.0 - pow(6 * ((1/6) - x), p) if x < (1/6) else 1 if x < (2/6) else 1 if x < (3/6) else 1.0 - pow(6 * (x - (3/6)), p) if x < (4/6) else 0 if x < (5/6) else 0 for x in x]]
     #y_Green.method = [x, [(math.cos(math.tau * (3 * (x + (1/6)))) + 1) / 2 if x < (1/6) else 1 if x < (3/6) else (math.cos(math.tau * (3 * (x + (1/6)))) + 1) / 2 if x < (4/6) else 0 for x in x]]
-    y_Green.method = [x, [(1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * (x - (0/6)), p)))) / 2 if x < (0.5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * ((1/6) - x), p))) + 1) / 2 if x < (1/6) else 1 if x < (3/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * (x - (3/6)), p))) + 1) / 2 if x < (3.5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * ((4/6) - x), p)))) / 2 if x < (4/6) else 0 for x in x]]
+    #y_Green.method = [x, [(1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * (x - (0/6)), p)))) / 2 if x < (0.5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * ((1/6) - x), p))) + 1) / 2 if x < (1/6) else 1 if x < (3/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * (x - (3/6)), p))) + 1) / 2 if x < (3.5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * ((4/6) - x), p)))) / 2 if x < (4/6) else 0 for x in x]]
+    y_Green.method = [x, [(np.sqrt(max(0.0, 1.0 - pow(12 * (x - (0.5/6)), p)))) / 2 if x < (0.5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * ((0.5/6) - x), p))) + 1) / 2 if x < (1/6) else 1 if x < (3/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * (x - (3.5/6)), p))) + 1) / 2 if x < (3.5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * ((3.5/6) - x), p)))) / 2 if x < (4/6) else 0 for x in x]]
     #y_Green.colour = (0.0, 1.0, 0.0)
     y_Green.colour = (0.3, 1.0, 0.0)
     y.append(y_Green)
@@ -54,7 +56,8 @@ def main():
     #y_Blue.method = [x, [0 if x < (1/3) else 1.0 - pow(3 * ((2/3) - x), p) if x < (2/3) else 1.0 - pow(3 * (x - (2/3)), p) for x in x]]
     #y_Blue.method = [x, [0 if x < (1/6) else 0 if x < (2/6) else 1.0 - pow(6 * ((3/6) - x), p) if x < (3/6) else 1 if x < (4/6) else 1 if x < (5/6) else 1.0 - pow(6 * (x - (5/6)), p) for x in x]]
     #y_Blue.method = [x, [(0 if x < (2/6) else (math.cos(math.tau * (3 * (x + (1/6))))) + 1) / 2 if x < (3/6) else 1 if x < (5/6) else (math.cos(math.tau * (3 * (x + (1/6)))) + 1) / 2 for x in x]]
-    y_Blue.method = [x, [0 if x < (2/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * (x - (2/6)), p)))) / 2 if x < (2.5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * ((3/6) - x), p))) + 1) / 2 if x < (3/6) else 1 if x < (5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * (x - (5/6)), p))) + 1) / 2 if x < (5.5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * ((6/6) - x), p)))) / 2 for x in x]]
+    #y_Blue.method = [x, [0 if x < (2/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * (x - (2/6)), p)))) / 2 if x < (2.5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * ((3/6) - x), p))) + 1) / 2 if x < (3/6) else 1 if x < (5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * (x - (5/6)), p))) + 1) / 2 if x < (5.5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * ((6/6) - x), p)))) / 2 for x in x]]
+    y_Blue.method = [x, [0 if x < (2/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * (x - (2.5/6)), p)))) / 2 if x < (2.5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * ((2.5/6) - x), p))) + 1) / 2 if x < (3/6) else 1 if x < (5/6) else (1.0 - np.sqrt(max(0.0, 1.0 - pow(12 * (x - (5.5/6)), p))) + 1) / 2 if x < (5.5/6) else (np.sqrt(max(0.0, 1.0 - pow(12 * ((5.5/6) - x), p)))) / 2 for x in x]]
     #y_Blue.colour = (0.0, 0.0, 1.0)
     y_Blue.colour = (0.0, 0.3, 1.0)
     y.append(y_Blue)

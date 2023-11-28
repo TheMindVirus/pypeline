@@ -25,8 +25,9 @@ shader0();
 //shader6();
 //shader7();
 //shader8();
-shader9();
+//shader9();
 //shader10();
+shader11();
 }
 shader0=function()
 {
@@ -284,5 +285,36 @@ B=255*1;
 A=255*1;
 ctx.fillStyle="rgba("+R+","+G+","+B+","+A+")";
 ctx.fillRect(0,0,w,h);
+}
+shader11=function()
+{
+canvas.width=canvas.width;
+for(y=0;y<h;y+=1)
+{
+for(x=0;x<w;x+=1)
+{
+X=x/w;
+P=2;//1.5;//2;//3;
+PR=(X<(1/6))?1:(X<(1.5/6))?(1-Math.sqrt(Math.max(0,1-Math.pow(12*((1.5/6)-X),P)))+1)/2:(X<(2/6))?(Math.sqrt(Math.max(0,1-Math.pow(12*(X-(1.5/6)),P))))/2:(X<(4/6))?0:(X<(4.5/6))?(Math.sqrt(Math.max(0,1-Math.pow(12*((4.5/6)-X),P))))/2:(X<(5/6))?(1-Math.sqrt(Math.max(0,1-Math.pow(12*(X-(4.5/6)),P)))+1)/2:1;
+PG=(X<(0.5/6))?(Math.sqrt(Math.max(0,1-Math.pow(12*((0.5/6)-X),P))))/2:(X<(1/6))?(1-Math.sqrt(Math.max(0,1-Math.pow(12*(X-(0.5/6)),P)))+1)/2:(X<(3/6))?1:(X<(3.5/6))?(1-Math.sqrt(Math.max(0,1-Math.pow(12*((3.5/6)-X),P)))+1)/2:(X<(4/6))?(Math.sqrt(Math.max(0,1-Math.pow(12*(X-(3.5/6)),P))))/2:0;
+PB=(X<(2/6))?0:(X<(2.5/6))?(Math.sqrt(Math.max(0,1-Math.pow(12*((2.5/6)-X),P))))/2:(X<(3/6))?(1-Math.sqrt(Math.max(0,1-Math.pow(12*(X-(2.5/6)),P)))+1)/2:(X<(5/6))?1:(X<(5.5/6))?(1-Math.sqrt(Math.max(0,1-Math.pow(12*((5.5/6)-X),P)))+1)/2:(Math.sqrt(Math.max(0,1-Math.pow(12*(X-(5.5/6)),P))))/2;
+DY=(y/h);
+PY=1-DY;
+DR=1-PR;
+DG=1-PG;
+DB=1-PB;
+H=X;
+I=(PY<0.5)?PY:(1-DY);
+R=255*PR*1;//((PY<0.5)?(2*PY*PR):(1-(2*DY*DR)));
+G=255*PG*1;//((PY<0.5)?(2*PY*PG):(1-(2*DY*DG)));
+B=255*PB*1;//((PY<0.5)?(2*PY*PB):(1-(2*DY*DB)));
+//if (PY > PR) { R = 0; }
+//if (PY > PG) { G = 0; }
+//if (PY > PB) { B = 0; }
+A=255;
+ctx.fillStyle="rgba("+R+","+G+","+B+","+A+")";
+ctx.fillRect(x,y,w,h);
+}
+}
 }
 </script>
