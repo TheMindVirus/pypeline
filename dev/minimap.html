@@ -1,0 +1,93 @@
+<script>
+pattern=function(m=32,n=32)
+{
+ var a = new Array();
+ for(var i=0;i<m;++i)
+ {
+  a.push(new Array());
+  for(var j=0;j<n;++j)
+  {
+   var k=0;
+   if((i%2)==0){k=((j%2)>0)?1:0;}
+   else if((i%4)<2){k=((j%6)>2)?0:1;}
+   else{k=((j%6)>2)?1:0;}
+   a[i].push(k);
+  }
+ }
+ return a;
+}
+border=function(b,m=32,n=32,flip=0)
+{
+ var a=new Array();
+ for(var i=0;i<m;++i)
+ {
+  a.push(new Array());
+  for(var j=0;j<n;++j)
+  {
+   var k=0;
+   if(flip==0)
+   {
+    var c=i%m;
+    var d1=j%n;
+    var d2=(j-1);if(d2<0){d2+=n;}d2%=n;
+    if(b[c][d1]!=b[c][d2]){k=1;}
+   }
+   else
+   {
+    var c1=i%m;
+    var c2=(i-1);if(c2<0){c2+=m;}c2%=m;
+    var d=j%n;
+    if(b[c1][d]!=b[c2][d]){k=1;}
+   }
+   a[i].push(k);
+  }
+ }
+ return a;
+}
+tiles=function(b,m=32,n=32,s=100)
+{
+ var div=document.createElement("div");
+ var ba=border(b);
+ var bb=border(b,m,n,flip=1);
+ div.style.transform="translateX("+(s*n*4)+"px) rotateX(60deg) rotateZ(45deg) scale(4)";
+ for(var i=0;i<m;++i)
+ {
+  for(var j=0;j<n;++j)
+  {
+   var sub=document.createElement("div");
+   if(b[i][j]>0){sub.setAttribute("B",1);}
+   else{sub.setAttribute("A",1);}
+   sub.setAttribute("F",1);
+   sub.style.width=s+"px";
+   sub.style.height=s+"px";
+   sub.style.top=(s*i)+"px";
+   sub.style.left=(s*j)+"px";
+   if(ba[i][j]){sub.setAttribute("C",1);}
+   if(bb[i][j]){sub.setAttribute("D",1);}
+   if(i==(0-0)){sub.setAttribute("D",1);}
+   if(j==(0-0)){sub.setAttribute("C",1);}
+   if(i==(m-1)){sub.setAttribute("E",1);}
+   if(j==(n-1)){sub.setAttribute("G",1);}
+   div.appendChild(sub);
+  }
+ }
+ return div;
+}
+window.onload=function()
+{
+ var a=pattern();
+ document.body.appendChild(tiles(a));
+ window.scrollTo(9500,3500);
+}
+</script>
+<style>
+    * { color-scheme: dark; }
+ body { background: #000; }
+  [A] { background: #111; }
+  [B] { background: #222; }
+  [C] { border-left: 1px #F03 dashed; }
+  [D] { border-top: 1px #F03 dashed; }
+  [E] { border-bottom: 1px #F03 dashed; }
+  [F] { position: fixed; padding-bottom: 1px; }
+  [G] { border-right: 1px #F03 dashed; }
+</style>
