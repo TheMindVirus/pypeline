@@ -129,8 +129,8 @@ class lineariser:
         self.size_z = self.actual_z * 2
 
         self.point_x = self.size_x + 1
-        self.point_y = self.size_x + 1
-        self.point_z = self.size_x + 1
+        self.point_y = self.size_y + 1
+        self.point_z = self.size_z + 1
         
         self.voxels = np.ndarray((self.size_x, self.size_y, self.size_z), dtype = bool)
         self.index_x, self.index_y, self.index_z = np.indices((self.point_x, self.point_y, self.point_z))
