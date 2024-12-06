@@ -8,25 +8,25 @@ def main():
     mpl.style.use("dark_background")
     
     data = []
-
+    
     data.append(record())
     data[-1].label = "circle"
-    data[-1].aura = [1.0, 0.0, 0.3, 0.5]
+    data[-1].aura = [1.0, 0.3, 0.3, 0.25]
     data[-1].formula = shapes().circle().check()
     
     data.append(record())
     data[-1].label = "triangle"
-    data[-1].aura = [0.0, 1.0, 0.3, 0.5]
+    data[-1].aura = [0.3, 1.0, 0.3, 0.25]
     data[-1].formula = shapes().triangle().check()
-
+    
     data.append(record())
     data[-1].label = "cross"
-    data[-1].aura = [0.3, 0.0, 1.0, 0.5]
+    data[-1].aura = [0.3, 0.3, 1.0, 0.25]
     data[-1].formula = shapes().cross().check()
-
+    
     data.append(record())
     data[-1].label = "square"
-    data[-1].aura = [1.0, 1.0, 0.3, 0.5]
+    data[-1].aura = [1.0, 1.0, 0.3, 0.25]
     data[-1].formula = shapes().square().check()
     
     scope(data)
@@ -111,20 +111,20 @@ class shapes:
         return self
 
     def circle(self, *args, **kwargs):
-        def equation(x, y, z, r = 1.0, *args, **kwargs):
+        def equation(x, y, z, r = 1.05, *args, **kwargs):
             return pow(-x, 2.0) + pow(-y, 2.0) + pow(-z, 2.0) <= pow(-r, 2.0)
         self.quadrant(equation, *args, **kwargs)
         return self
 
     def triangle(self, *args, **kwargs):
-        def equation(x, y, z, u = 0.0, *args, **kwargs):
-            return (((x + y) - 1) > u) and (((y + z) - 1) > u) and (((z + x) - 1) > u)
+        def equation(x, y, z, u = 0.00, *args, **kwargs):
+            return (((x + y) - 1.0) > u) and (((y + z) - 1.0) > u) and (((z + x) - 1.0) > u)
         self.quadrant(equation, *args, **kwargs)
         return self
 
     def cross(self, *args, **kwargs):
         def equation(x, y, z, t = 0.25, *args, **kwargs):
-            return ((x - y) <= t) and ((y - z) <= t) and ((z - x) <= t)
+            return (abs(x - y) <= t) and (abs(y - z) <= t) and (abs(z - x) <= t)
         self.quadrant(equation, *args, **kwargs)
         return self
 
